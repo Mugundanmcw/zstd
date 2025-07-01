@@ -2,7 +2,7 @@ name: windows-artifacts
 
 on:
   push:
-    branches: [dev, test_artifacts, win_artifacts, release ] #change this
+    branches: [WoA_CI, test_artifacts, win_artifacts, release ] #change this
   release:
     types:
       - published
