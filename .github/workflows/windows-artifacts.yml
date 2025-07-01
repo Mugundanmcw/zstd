@@ -12,7 +12,7 @@ permissions: read-all
 jobs:
   windows-artifacts:
     permissions:
-      contents: write# to fetch code and upload artifacts
+      contents: write # to fetch code and upload artifacts
     # For msys2, see https://ariya.io/2020/07/on-github-actions-with-msys2
     runs-on: ${{ matrix.build_type == 'cmake' && 'windows-11-arm' || 'windows-latest' }}
     strategy:
