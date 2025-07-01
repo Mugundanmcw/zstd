@@ -1,9 +1,11 @@
 name: windows-artifacts
+
 on:
   push:
-    branches: [ dev, test_artifacts, win_artifacts, release ]
+    branches: [ test_artifacts, win_artifacts, release ]
   release:
-    types: [ published ]
+    types:
+      - published
 
 permissions: read-all
 
