@@ -22,6 +22,10 @@ jobs:
           - { msystem: mingw64, env: x86_64, ziparch: win64, shell: msys2 }
           - { msystem: mingw32, env: i686, ziparch: win32, shell: msys2 }
           - { msystem: null, env: arm64, ziparch: win-arm64, shell: cmake }
+
+    defaults:
+      run:
+        shell: ${{ matrix.shell == 'cmake' && 'pwsh' || 'msys2 {0}' }}
     
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # tag=v4.2.2
